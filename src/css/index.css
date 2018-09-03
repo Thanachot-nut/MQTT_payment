@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.containerc {
+    background-color: #F6F6FB;
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    /*            background: red;*/
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.header .containv {
+    position: relative;
+    /*            background: green;*/
+    float: left;
+    width: 50px;
+    height: 100%;
+}
+
+.header .containr {
+    position: relative;
+    /*            background: green;*/
+    float: right;
+    width: 50px;
+    height: 100%;
+}
+
+.containr .profile {
+    background: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+
+}
+
+.containbody {
+    width: 100%;
+    height: 60%;
+    /*            background: red;*/
+    position: relative;
+    padding: 40px 14px;
+}
+
+.inputamount {
+    width: 100%;
+    height: 100%;
+    font-size: 55px;
+    text-align: right;
+    outline: none;
+    border: none;
+}
+
+.containclear {
+    position: relative;
+    background: white;
+    width: 100%;
+    height: 70px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
