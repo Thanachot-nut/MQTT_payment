@@ -17,7 +17,8 @@ export default {
       fgColor: '#000',
       value: 'https://github.com/l-ll/qrcode-vue',
       price:0,
-      qrcodebase64:''
+      qrcodebase64:'',
+      qrcode:''
     }
   },
   components: {
