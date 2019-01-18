@@ -86,10 +86,6 @@ export default {
       var string = numeral(x.value).format('0,0');
       x.value = string;
     },
-    removetime() {
-      var count = 60;
-      location.reload();
-   }
   },
   mounted () {
     this.button_clearvalue()
