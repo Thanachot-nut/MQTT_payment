@@ -11,7 +11,7 @@
         <div class="containv">
           <span
             style="font-family:'Open Sans', sans-serif;font-weight: bold;position: absolute;top: 50%;transform: translateY(-50%);left: 5px;font-size: 15px;"
-          >Payment QR CODE</span>
+          >Payment QR CODE TTT</span>
         </div>
         <div class="containr">
           <div class="profile"></div>
@@ -27,14 +27,20 @@
           style="position: relative;background: white;
                     width: 100%;height: 120px;border:1px solid;border-color:rgba(0,0,0,0.06);"
         >
-          <input type="number" id="fname" v-model.number="price" class="inputamount" placeholder="จำนวนเงิน">
+          <input
+            type="number"
+            id="fname"
+            v-model.number="price"
+            class="inputamount"
+            placeholder="จำนวนเงิน"
+          >
         </div>
       </div>
       <div class="containclear" @click="button_clearvalue()">
-          <span
-            style="font-family:'Open Sans', sans-serif;font-weight: bold;font-size: 25px;position: absolute;right: 20px;top:50%;transform: translateY(-50%);"
-          >CLEAR</span>
-        </div>
+        <span
+          style="font-family:'Open Sans', sans-serif;font-weight: bold;font-size: 25px;position: absolute;right: 20px;top:50%;transform: translateY(-50%);"
+        >CLEAR</span>
+      </div>
 
       <!-- <qrcode-vue
         :size="size"
