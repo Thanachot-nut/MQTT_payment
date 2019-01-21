@@ -11,7 +11,7 @@
         <div class="containv">
           <span
             style="font-family:'Open Sans', sans-serif;font-weight: bold;position: absolute;top: 50%;transform: translateY(-50%);left: 5px;font-size: 15px;"
-          >Payment QR CODE TTT</span>
+          >Payment QR CODE</span>
         </div>
         <div class="containr">
           <div class="profile"></div>
