@@ -18,7 +18,8 @@ export default {
       value: 'https://github.com/l-ll/qrcode-vue',
       price:0,
       qrcodebase64:'',
-      qrcode:''
+      qrcode:'',
+      count:60,
     }
   },
   components: {
@@ -29,6 +30,14 @@ export default {
       this.$router.push(historz)
     },
     runtime(){
+      if(this.price <= 0){
+        alert('กรุณากรอกจำนวนเงิน')
+        return
+      }
+      $('#myModal').modal({
+        backdrop: false
+      })
+
       console.log('call apix')
       var resultbath = this.convertbath(this.price)
       console.log('resultbath:'+(resultbath)) 
@@ -38,38 +47,37 @@ export default {
         amount: this.price
       }
       console.log(JSON.stringify(payload))
-      api.callqrcode(payload,
-      (result) => {
-          if(result.status === 'success'){
-            console.log('channel sub:'+result.sub_channel)
-            this.qrcode = result.qr_tag
-            console.log("qrimage"+result.qr_image)
-            this.qrcodebase64 = 'data:image/png;base64,'+result.qr_image
+    //   api.callqrcode(payload,
+    //   (result) => {
+    //       if(result.status === 'success'){
+    //         console.log(result)
+    //         console.log('channel sub:'+result.sub_channel)
+    //         this.qrcode = result.qr_tag
+    //         console.log("qrimage"+result.qr_image)
+    //         this.qrcodebase64 = 'data:image/png;base64,'+result.qr_image
         
-            client.subscribe({
-              key: "aArZ5ThGcFCRJ0UumrK6YcssjRhAmEKD",
-              channel: result.sub_channel
-            });
-    //            client.subscribe({
-    //    key: "0iwpcieX04lsVwVCp-cFYNrB5hf-JPP6",
-    //    channel: "testtunnelnx/"
-    //  });
-        }
-      },
-      (error) => {
-        console.log(error)
-      })
+    //         client.subscribe({
+    //           key: "aArZ5ThGcFCRJ0UumrK6YcssjRhAmEKD",
+    //           channel: result.sub_channel
+    //         });
+    // //            client.subscribe({
+    // //    key: "0iwpcieX04lsVwVCp-cFYNrB5hf-JPP6",
+    // //    channel: "testtunnelnx/"
+    // //  });
+    //     }
+    //   },
+    //   (error) => {
+    //     console.log(error)
+    //   })
       
-      var timer = null;
-      clearInterval(timer);
-      var count = 60,
-          timer = setInterval(function() {
-              $("#counter").html(count--);
-              if (count == 0) {
+        var test = setInterval(function() {
+              $("#counter").html(this.count--);
+              if (this.count == 0) {
                   swal("Time Out!", "Try Again!", "error");
-                  clearInterval(timer);
+                  return
               }
-          }, 1000);
+          }.bind(this), 1000);
+          console.log(test)
     },
     convertbath(val){
       var x = numeral(val).format('0,0.00');
@@ -79,7 +87,6 @@ export default {
       document.getElementById('fname').value = 0;
     },
     removetime(){
-      var count = 60;
       location.reload();
     },
     myFunction(cccc){

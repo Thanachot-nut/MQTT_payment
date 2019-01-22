@@ -46,9 +46,6 @@
       <button
         style="position: absolute;bottom: 0;background: rgb(0, 161, 255);width:100%;height: 60px;cursor: pointer"
         @click="runtime()"
-        data-toggle="modal"
-        data-target="#myModal"
-        :disabled="price<=0"
       >
         <span
           style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);font-family:'Open Sans', sans-serif;font-weight: bold;font-size: 19px;color: white;"

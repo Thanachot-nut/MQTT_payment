@@ -9,7 +9,7 @@ Vue.use(Vueaxios, axios)
 export default {
   callqrcode (data, success, error) {
     console.log("ส่ง JSON payment"+JSON.stringify(data))
-    Vue.axios.post('https://cloud.paybox.work/v1/payment/qrpay/open' , JSON.stringify(data),{
+    Vue.axios.post('http://test.paybox.work/v1/payment/qrpay/open' , JSON.stringify(data),{
       headers: {
           'Content-Type': 'application/json', 
           'x-access-token': '246aa13b23f64f67be1ab463de0dcb72',
