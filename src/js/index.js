@@ -47,28 +47,28 @@ export default {
         amount: this.price
       }
       console.log(JSON.stringify(payload))
-    //   api.callqrcode(payload,
-    //   (result) => {
-    //       if(result.status === 'success'){
-    //         console.log(result)
-    //         console.log('channel sub:'+result.sub_channel)
-    //         this.qrcode = result.qr_tag
-    //         console.log("qrimage"+result.qr_image)
-    //         this.qrcodebase64 = 'data:image/png;base64,'+result.qr_image
+      api.callqrcode(payload,
+      (result) => {
+          if(result.status === 'success'){
+            console.log(result)
+            console.log('channel sub:'+result.sub_channel)
+            this.qrcode = result.qr_tag
+            console.log("qrimage"+result.qr_image)
+            this.qrcodebase64 = 'data:image/png;base64,'+result.qr_image
         
-    //         client.subscribe({
-    //           key: "aArZ5ThGcFCRJ0UumrK6YcssjRhAmEKD",
-    //           channel: result.sub_channel
-    //         });
-    // //            client.subscribe({
-    // //    key: "0iwpcieX04lsVwVCp-cFYNrB5hf-JPP6",
-    // //    channel: "testtunnelnx/"
-    // //  });
-    //     }
-    //   },
-    //   (error) => {
-    //     console.log(error)
-    //   })
+            client.subscribe({
+              key: "aArZ5ThGcFCRJ0UumrK6YcssjRhAmEKD",
+              channel: result.sub_channel
+            });
+    //            client.subscribe({
+    //    key: "0iwpcieX04lsVwVCp-cFYNrB5hf-JPP6",
+    //    channel: "testtunnelnx/"
+    //  });
+        }
+      },
+      (error) => {
+        console.log(error)
+      })
       
         var test = setInterval(function() {
               $("#counter").html(this.count--);
