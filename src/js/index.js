@@ -19,7 +19,7 @@ export default {
       price:0,
       qrcodebase64:'',
       qrcode:'',
-      count:60,
+      count:5,
     }
   },
   components: {
@@ -74,10 +74,14 @@ export default {
               $("#counter").html(this.count--);
               if (this.count == 0) {
                   swal("Time Out!", "Try Again!", "error");
-                  return
+                  window.clearInterval(test);
               }
           }.bind(this), 1000);
-          console.log(test)
+          // if(this.count == 0){
+            
+          //   return
+          // }
+          // console.log(test)
     },
     convertbath(val){
       var x = numeral(val).format('0,0.00');
