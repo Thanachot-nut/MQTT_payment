@@ -99,7 +99,16 @@
               <span
                 style="font-family:'Open Sans', sans-serif;font-weight: bold;font-size:15px;"
               >Base 64</span>
-              <img :src="qrcodebase64" style="width: 70%;height: 50%;">
+              <!--<img :src="qrcodebase64" style="width: 70%;height: 50%;">
+              -->
+              <qr-code
+                :text="qrcode"
+                style="position:relative"
+                foreground="#0089D1"
+                :size="size"
+                error-level="Q"
+              ></qr-code>
+              <img src="../assets/logo_nopadol.png" style="width:50px;height:50px;">
             </div>
           </div>
           <!-- Modal footer -->
