@@ -195,4 +195,4 @@
   </div>
 </template>
 <script src="../js/historypayment.js"></script>
-<style src="../css/historypayment.css"></style>
+<style scoped src="../css/historypayment.css"></style>

@@ -3,7 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+.modal-content{
+padding: 12px !important;
+}
 
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    background: rgba(0,0,0,0.65) !important;
+    outline: 0;
+}
+.modal-dialog{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    top: 11%;
+}
 .containerc {
     background-color: #F6F6FB;
     width: 100%;
@@ -46,9 +66,9 @@
 }
 
 .containbody {
-    width: 100%;
+    width: 100% !important;
     /*            background: red;*/
-    position: relative;
+    position: relative !important;
 }
 
 .inputamount {

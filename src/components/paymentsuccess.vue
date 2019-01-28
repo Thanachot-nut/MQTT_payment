@@ -39,4 +39,4 @@
   </div>
 </template>
 <script src="../js/paymentsuccess.js"></script>
-<style src="../css/paymentsuccess.css"></style>
+<style scoped src="../css/paymentsuccess.css"></style>

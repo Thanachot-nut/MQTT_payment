@@ -10,7 +10,7 @@
         </div>
         <div class="containv">
           <span
-            style="font-family:'Open Sans', sans-serif;font-weight: bold;position: absolute;top: 50%;transform: translateY(-50%);left: 5px;font-size: 15px;"
+            style="font-family:'Open Sans', sans-serif;font-weight: bold;position: absolute;top: 50%;transform: translateY(-50%);left: 5px;font-size: 15px;white-space:nowrap"
           >Payment QR CODE</span>
         </div>
         <div class="containr">
@@ -33,6 +33,7 @@
             v-model.number="price"
             class="inputamount"
             placeholder="จำนวนเงิน"
+            @keyup.enter="runtime"
           >
         </div>
       </div>
@@ -114,7 +115,7 @@
           <!-- Modal footer -->
           <div class="modal-footer" style="position:relative;height:10vh;">
             <button
-              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:50px;"
+              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:50px;width:60px;"
               type="button"
               class="btn btn-danger"
               data-dismiss="modal"
@@ -135,4 +136,4 @@
   </div>
 </template>
 <script src="../js/index.js"></script>
-<style src="../css/index.css"></style>
+<style scoped src="../css/index.css"></style>
