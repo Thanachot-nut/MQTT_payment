@@ -20,7 +20,7 @@ padding: 12px !important;
 }
 .modal-dialog{
     position: relative;
-    left: 50%;
+    left: 48%;
     transform: translateX(-50%) !important;
     top: 11%;
 }
