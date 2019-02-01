@@ -24,7 +24,7 @@ export default {
       price: 0,
       qrcodebase64: '',
       qrcode: '',
-      count: 60,
+      count: 180,
     }
   },
   components: {
@@ -49,7 +49,9 @@ export default {
       var payload = {
         vending_uuid: "testing",
         order_uuid: "testing123",
-        amount: this.price
+        amount: this.price,
+        client_name:"MAKEKAFE",
+        terminal_id:"0001"
       }
       console.log(JSON.stringify(payload))
       api.callqrcode(payload,
