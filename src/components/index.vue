@@ -115,7 +115,8 @@
           <!-- Modal footer -->
           <div class="modal-footer" style="position:relative;height:10vh;">
             <button
-              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:50px;width:60px;"
+              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:50px;width: auto;
+    padding: 0 6px;"
               type="button"
               class="btn btn-danger"
               data-dismiss="modal"

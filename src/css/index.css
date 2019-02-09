@@ -91,3 +91,10 @@ padding: 12px !important;
     border-color: rgba(0, 0, 0, 0.06);
     cursor: pointer;
 }
+
+.index{
+    background: rgba(0,0,0,0.5); 
+}
+.containerc{
+    position: relative; max-width: 400px; margin: 0 auto;
+}
